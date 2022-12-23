@@ -3,11 +3,8 @@
   width: 440px;
   .header {
     display: flex;
-    img {
-      border-radius: 50%;
+    .profilePic {
       margin: 0 20px;
-      height: 40px;
-      width: 40px;
     }
     span {
       margin: 0 10px;
@@ -38,9 +35,6 @@
   }
   .footer {
     .list {
-      margin: 0;
-      padding: 0;
-      list-style: none;
       display: flex;
       justify-content: space-around;
       button {
@@ -48,11 +42,4 @@
       }
     }
   }
-}
-//General
-
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }

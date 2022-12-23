@@ -31,7 +31,11 @@ export const Tweet = ({
   return (
     <article className={styles.tweet}>
       <div className={styles.header}>
-        <img src={profilePic} alt="Profile pic" className={styles.tweet} />
+        <img
+          src={profilePic}
+          alt="Profile pic"
+          className={`${styles.profilePic} img-default`}
+        />
         <div className={styles.container}>
           <span className={styles.fullName}>{fullName}</span>
           <span className={styles.gray}>@{username}</span>

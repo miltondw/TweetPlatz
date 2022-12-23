@@ -1,8 +1,10 @@
 import "./App.css";
 import { Tweet } from "./components/Tweet";
+import { PublishTweet } from "./components/PublishTweet";
 function App() {
   return (
     <div className="App">
+      <PublishTweet />
       <Tweet
         fullName="Milton Estrada"
         username="miltondw01"
