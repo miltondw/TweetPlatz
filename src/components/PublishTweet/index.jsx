@@ -5,21 +5,21 @@ import { CgOptions } from "react-icons/cg";
 import { MdOutlineDateRange } from "react-icons/md";
 import { SiGooglemaps } from "react-icons/si";
 import styles from "./styles.module.scss";
+import { saveLocalStorage } from "../../utils/saveLocalStorage";
 
 export const PublishTweet = () => {
   //TODO:max 280 characters
   //* height textarea textarea
   //* funcionalidad de btns
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submit");
-  };
-
-  const handleTweet = (e) => {
-    let text = e.target.value;
-    if (text.length > 280) {
-      console.log("max 280 characters");
-    }
+    const user = {
+      username: "miltondw",
+      tweet: e.target.tweet.value,
+      name: "milton",
+    };
+    saveLocalStorage("my-tweets", user);
   };
   return (
     <div className={styles.publishTweet}>
@@ -28,15 +28,14 @@ export const PublishTweet = () => {
         src="https://picsum.photos/50"
         alt="profile pic"
       />
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <textarea
           className={styles.textarea}
           name="tweet"
           id="tweet"
           cols="30"
           rows="10"
-          placeholder="What's happening?"
-          onChange={handleTweet}></textarea>
+          placeholder="What's happening?"></textarea>
         <div className={styles.footer}>
           <ul className={styles.list}>
             <li>
@@ -70,10 +69,7 @@ export const PublishTweet = () => {
               </button>
             </li>
           </ul>
-          <button
-            onClick={handleSubmit}
-            className={styles.Tweetear}
-            type="submit">
+          <button className={styles.Tweetear} type="submit">
             Tweet
           </button>
         </div>
