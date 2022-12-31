@@ -1,0 +1,18 @@
+.asideTrending {
+  position: fixed;
+  right: 0;
+  width: 30%;
+
+  .cardsTrending {
+    background: var(--color-gray-light);
+    width: 80%;
+    border-radius: 15px;
+    padding: 1em;
+    margin-top: 1em;
+    .CardTitle {
+      font-size: 20px;
+      margin: 0;
+      color: var(--color-dark);
+    }
+  }
+}

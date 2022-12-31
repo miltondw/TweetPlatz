@@ -1,8 +1,25 @@
 @import url("./normalize.css");
+:root {
+  /* --primary-color: rgb(29, 155, 240); */
+  --primary-color: #97c93e;
+  --secondary-color: #121f3d;
+  /* --color-gray-light: rgb(239, 243, 244); */
+  --color-gray-light: rgb(239, 243, 244);
+  --color-dark: #010101;
+  --color-light: #eff3f8;
+}
+* {
+  font-family: sans-serif;
+}
+body {
+  background: var(--secondary-color);
+  color: var(--color-light);
+}
 button {
   background: transparent;
   border: none;
   cursor: pointer;
+  color: var(--color-light);
 }
 ul {
   margin: 0;
@@ -15,4 +32,9 @@ ul {
   height: 45px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

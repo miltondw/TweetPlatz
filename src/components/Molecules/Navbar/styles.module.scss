@@ -1,0 +1,69 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 1em;
+  width: 28%;
+  color: var(--color-light);
+
+  .logo {
+    font-size: 2em;
+    margin-left: 2em;
+    color: var(--primary-color);
+  }
+  .list {
+    font-size: 20px;
+    margin-left: 2em;
+    li {
+      margin: 1em;
+    }
+    span {
+      font-size: 24px;
+    }
+    a {
+      margin-left: 1em;
+      font-weight: 400;
+    }
+    button {
+      margin-left: 14px;
+      color: var(--color-light);
+    }
+    .subList {
+      display: none;
+    }
+
+    .btnTw {
+      background: var(--primary-color);
+      color: #fff;
+      width: 18vw;
+      padding: 14px;
+      border-radius: 30px;
+      margin-left: 0 !important;
+    }
+  }
+  .profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .footerData {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0 0 1em;
+    button {
+      font-size: 28px;
+    }
+    .footerContent {
+      display: flex;
+    }
+    .profileData {
+      h1,
+      p {
+        font-size: 15px;
+        margin: 0 15px;
+      }
+      p {
+        color: rgb(83, 100, 113);
+      }
+    }
+  }
+}

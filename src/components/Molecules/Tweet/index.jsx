@@ -10,6 +10,7 @@ export const Tweet = ({
   username,
   profilePic = "https://picsum.photos/100",
   children,
+  random,
 }) => {
   const [likes, setLikes] = useState([false, 7]);
   const [comments, setComments] = useState(10);
@@ -29,7 +30,7 @@ export const Tweet = ({
     }
   };
   return (
-    <article className={styles.tweet}>
+    <article className={`${styles.tweet} ${random && styles.lineTwe}`}>
       <div className={styles.header}>
         <img
           src={profilePic}
@@ -37,9 +38,11 @@ export const Tweet = ({
           className={`${styles.profilePic} img-default`}
         />
         <div className={styles.container}>
-          <span className={styles.fullName}>{fullName}</span>
-          <span className={styles.gray}>@{username}</span>
-          <span className={styles.gray}>20h</span>
+          <div className={styles.contentDataUser}>
+            <span className={styles.fullName}>{fullName}</span>
+            <span className={styles.gray}>@{username}</span>
+            <span className={styles.gray}>20h</span>
+          </div>
           <button>
             <AiOutlineEllipsis />
           </button>
@@ -62,7 +65,11 @@ export const Tweet = ({
           </li>
           <li>
             <button onClick={handleLike}>
-              {!likes[0] ? <BsSuitHeart /> : <BsSuitHeartFill />}
+              {!likes[0] ? (
+                <BsSuitHeart />
+              ) : (
+                <BsSuitHeartFill style={{ color: "var(--primary-color)" }} />
+              )}
             </button>
             {likes[1]}
           </li>
@@ -73,6 +80,16 @@ export const Tweet = ({
           </li>
         </ul>
       </div>
+      {random && (
+        <span>
+          <img
+            src={profilePic}
+            alt="Profile pic"
+            className={`${styles.subImg}`}
+          />
+          <a href="/">Show this thread</a>
+        </span>
+      )}
     </article>
   );
 };

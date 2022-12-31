@@ -1,12 +1,10 @@
 import "./App.css";
-import Timeline from "./components/Timeline";
-import { TweetsContext } from "./context/TweetsContext";
+import { Home } from "./components/Views/Home";
+
 function App() {
   return (
     <div className="App">
-      <TweetsContext>
-        <Timeline />
-      </TweetsContext>
+      <Home />
     </div>
   );
 }

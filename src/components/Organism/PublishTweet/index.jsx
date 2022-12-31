@@ -4,8 +4,9 @@ import { TfiFaceSmile } from "react-icons/tfi";
 import { CgOptions } from "react-icons/cg";
 import { MdOutlineDateRange } from "react-icons/md";
 import { SiGooglemaps } from "react-icons/si";
+import { BsStars } from "react-icons/bs";
 import styles from "./styles.module.scss";
-import { saveLocalStorage } from "../../utils/saveLocalStorage";
+import { saveLocalStorage } from "../../../utils/saveLocalStorage";
 
 export const PublishTweet = () => {
   //TODO:max 280 characters
@@ -23,6 +24,9 @@ export const PublishTweet = () => {
   };
   return (
     <div className={styles.publishTweet}>
+      <h2 className={styles.title}>
+        Home <BsStars />
+      </h2>
       <img
         className={`${styles.profilePic} img-default`}
         src="https://picsum.photos/50"
